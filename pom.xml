@@ -35,6 +35,12 @@
 	  <artifactId>camunda-bpm-spring-boot-starter-rest</artifactId>
 	  <version>${camunda.spring-boot.version}</version>
 	</dependency>
+	
+	
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-amqp</artifactId>
+		</dependency>
     
     <dependency>
       <groupId>com.h2database</groupId>

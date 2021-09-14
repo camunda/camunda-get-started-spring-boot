@@ -1,3 +1,5 @@
+server:
+  port: 9080
 camunda.bpm:
   admin-user:
     id: demo
@@ -5,3 +7,9 @@ camunda.bpm:
     firstName: Demo
   filter:
     create: All tasks
+    
+restProxyHost: localhost
+restProxyPort: 9080
+
+rabbitmqHost: localhost
+rabbitmqPort: 5672
