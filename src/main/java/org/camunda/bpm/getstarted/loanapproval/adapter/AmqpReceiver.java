@@ -3,6 +3,8 @@ package org.camunda.bpm.getstarted.loanapproval.adapter;
 import java.util.UUID;
 
 import org.camunda.bpm.engine.ProcessEngine;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.amqp.rabbit.annotation.Exchange;
 import org.springframework.amqp.rabbit.annotation.Queue;
 import org.springframework.amqp.rabbit.annotation.QueueBinding;
@@ -17,6 +19,8 @@ import org.springframework.transaction.annotation.Transactional;
 @Component
 @Profile("!test")
 public class AmqpReceiver {
+	
+	private static Logger logger=LoggerFactory.getLogger(AmqpReceiver.class);
 
   @Autowired
   private ProcessEngine camunda;
@@ -38,6 +42,14 @@ public class AmqpReceiver {
       key = "*"))
   @Transactional  
   public void dummyShipGoodsCommand(String orderId) {
+	  logger.info("++++++dummyShipGoodsCommand->orderId="+orderId);
+	 logger.info("++++++ I am sleeping 10 seconds "+orderId);
+	  try {
+		Thread.sleep(10000);
+	} catch (InterruptedException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
     // and call back directly with a generated transactionId
     handleGoodsShippedEvent(orderId, UUID.randomUUID().toString());
   }

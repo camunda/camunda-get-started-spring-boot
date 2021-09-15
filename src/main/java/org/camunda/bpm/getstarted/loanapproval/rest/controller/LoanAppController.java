@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 //import com.camunda.demo.springboot.ProcessConstants;
 @RestController
 @RequestMapping("/loan")
-public class LoanAppContyroller {
+public class LoanAppController {
 	
 	
 	 @Autowired
