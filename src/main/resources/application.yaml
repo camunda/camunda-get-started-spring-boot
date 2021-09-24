@@ -18,3 +18,5 @@ spring:
   cloud:
     bus:
       destination: camunda-get-started-spring-boot
+
+    create: All tasks
