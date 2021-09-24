@@ -11,5 +11,10 @@ camunda.bpm:
 restProxyHost: localhost
 restProxyPort: 9080
 
-rabbitmqHost: localhost
-rabbitmqPort: 5672
+#rabbitmqHost: localhost
+#rabbitmqPort: 5672
+
+spring:
+  cloud:
+    bus:
+      destination: camunda-get-started-spring-boot

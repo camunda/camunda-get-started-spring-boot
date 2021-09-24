@@ -43,7 +43,7 @@ public class AmqpReceiver {
   @Transactional  
   public void dummyShipGoodsCommand(String orderId) {
 	  logger.info("++++++dummyShipGoodsCommand->orderId="+orderId);
-	 logger.info("++++++ I am sleeping 10 seconds "+orderId);
+	 logger.info("++++++ I am sleeping 10 seconds ");
 	  try {
 		Thread.sleep(10000);
 	} catch (InterruptedException e) {

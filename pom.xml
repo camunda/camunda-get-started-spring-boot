@@ -36,11 +36,20 @@
 	  <version>${camunda.spring-boot.version}</version>
 	</dependency>
 	
-	
+<!-- 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-amqp</artifactId>
 		</dependency>
+		
+ -->			
+		<!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-bus-amqp -->
+<dependency>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-starter-bus-amqp</artifactId>
+    <version>3.0.3</version>
+</dependency>
+		
     
     <dependency>
       <groupId>com.h2database</groupId>
