@@ -5,3 +5,12 @@ camunda.bpm:
     firstName: Demo
   filter:
     create: All tasks
+    
+spring:
+  datasource:
+    driver-class-name: oracle.jdbc.OracleDriver
+    url: jdbc:oracle:thin:@localhost:1521/BPMN_DEMO
+    username: camunda
+    password: camunda
+  jpa:
+    database-platform: org.hibernate.dialect.Oracle10gDialect  

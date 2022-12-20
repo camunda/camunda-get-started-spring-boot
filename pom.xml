@@ -9,6 +9,7 @@
     <spring-boot.version>2.7.3</spring-boot.version>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
+    <version.lib.ojdbc>21.8.0.0</version.lib.ojdbc>
   </properties>
   
   <dependencyManagement>
@@ -29,10 +30,15 @@
       <artifactId>camunda-bpm-spring-boot-starter-webapp</artifactId>
       <version>${camunda.spring-boot.version}</version>
     </dependency>
-    <dependency>
-      <groupId>com.h2database</groupId>
-      <artifactId>h2</artifactId>
-    </dependency>
+	<dependency>
+	    <groupId>org.springframework.boot</groupId>
+	    <artifactId>spring-boot-starter-jdbc</artifactId>
+	    <version>${spring-boot.version}</version>
+	</dependency>    
+	<dependency>
+	    <groupId>com.oracle.database.jdbc</groupId>
+	    <artifactId>ojdbc8</artifactId>
+	</dependency>    
     <dependency>
       <groupId>com.sun.xml.bind</groupId>
       <artifactId>jaxb-impl</artifactId>
